@@ -15,6 +15,8 @@ words = [
 
 secret_word = random.choice(words)
 
+tries = 0
+
 while True:
 
     guess = input("Enter the five letter word: ").upper()
@@ -22,6 +24,8 @@ while True:
     while len(guess) != 5:
         print("Word must contain exactly five letters")
         guess = input("Enter the five letter word: ").upper()
+
+    tries += 1
 
     for i in range(5):
         count = 0
@@ -36,6 +40,20 @@ while True:
             print(guess[i], "is incorrect")
 
     if guess == secret_word:
+
+        if tries == 1:
+            score = 100
+        elif tries == 2:
+            score = 80
+        elif tries == 3:
+            score = 60
+        elif tries == 4:
+            score = 40
+        else:
+            score = 20
+
         print("\nYou guessed it correctly")
+        print("Total tries:", tries)
+        print("Your score is:", score)
 
         break
