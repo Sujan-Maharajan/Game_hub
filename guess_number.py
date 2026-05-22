@@ -1,4 +1,6 @@
 import random
+from dataManager.dataManager import *
+
 temp = True
 tries = 0
 random_number = random.randint(1, 100)
@@ -30,5 +32,8 @@ while temp == True:
             score = 20
         
         print("Your score is:", score)
+
+        save_score("guess_number", score, "Sujan")
+        print("\nScore Saved Successfully")
 
         break
