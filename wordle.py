@@ -1,5 +1,7 @@
 import random
 
+from dataManager.dataManager import *
+
 words = [
     "WORDS",
     "RELIC",
@@ -55,5 +57,8 @@ while True:
         print("\nYou guessed it correctly")
         print("Total tries:", tries)
         print("Your score is:", score)
+
+        save_score("wordle", score, "Sujan")
+        print("\nScore Saved Successfully")
 
         break

@@ -1,7 +1,6 @@
 import json
 
-
-def addUser(user,password):
+def addUser(user,password):  #for adding username and password
   with  open("data/users.json","r") as f:
     users = json.load(f)
     users[user] = {"password": password}
@@ -21,15 +20,14 @@ def addUser(user,password):
     json.dump(users,f,indent =4)
 
  
-def userList():     #timle eauta user name ko dict pauchau just loop over it#
+def userList():     #timle eauta user name ko dict pauchau just loop over it (For displaying username)
   with open('data/users.json',"r") as f:
     users = json.load(f)
+    print(users.keys())
     return users.keys()
-  with open("data/users.json","w") as f:
-    json.dump(users,f,indent =4)
 
 
-def usersNdcredentials():
+def usersNdcredentials():  #for verifying
   with open('data/users.json','r') as f:
     user = json.load(f);
     return user;
@@ -37,8 +35,7 @@ def usersNdcredentials():
     json.dump(users,f,indent =4)
 
 
-
-def save_score(game,score,username):
+def save_score(game,score,username): #for saving score of a game
   with open('data/games.json','r') as f:
     games=json.load(f);
     games[username][game]=score;
@@ -46,8 +43,7 @@ def save_score(game,score,username):
     json.dump(games,f,indent =4)
 
  
-
-def get_user_scores(username):
+def get_user_scores(username):  #showing score for leaderborad
   with open('data/games.json','r') as f:
     games = json.load(f);
     return games[username]
@@ -55,9 +51,7 @@ def get_user_scores(username):
     json.dump(games,f,indent =4)
  
 
-def allUserWithScore():
+def allUserWithScore():  #for profile use
   with open('data/games.json','r') as f:
     games = json.load(f);
     return games;
-
-

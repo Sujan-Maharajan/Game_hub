@@ -12,5 +12,12 @@
         "ttt": 0,
         "quiz": 0,
         "guess_number": 0
+    },
+    "Sujan": {
+        "rps": 0,
+        "wordle": 60,
+        "ttt": 0,
+        "quiz": 0,
+        "guess_number": 0
     }
 }
