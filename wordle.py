@@ -2,63 +2,65 @@ import random
 
 from dataManager.dataManager import *
 
-words = [
-    "WORDS",
-    "RELIC",
-    "HOUSE",
-    "PLANT",
-    "SHAVE",
-    "STONE",
-    "TRAIN",
-    "LIGHT",
-    "MONEY",
-    "WATER"
-]
+def wordle(username):
 
-secret_word = random.choice(words)
+    words = [
+        "WORDS",
+        "RELIC",
+        "HOUSE",
+        "PLANT",
+        "SHAVE",
+        "STONE",
+        "TRAIN",
+        "LIGHT",
+        "MONEY",
+        "WATER"
+    ]
 
-tries = 0
+    secret_word = random.choice(words)
 
-while True:
+    tries = 0
 
-    guess = input("Enter the five letter word: ").upper()
+    while True:
 
-    while len(guess) != 5:
-        print("Word must contain exactly five letters")
         guess = input("Enter the five letter word: ").upper()
 
-    tries += 1
+        while len(guess) != 5:
+            print("Word must contain exactly five letters")
+            guess = input("Enter the five letter word: ").upper()
 
-    for i in range(5):
-        count = 0
+        tries += 1
 
-        for j in range(5):
-            if guess[i] == secret_word[j]:
-                count += 1
+        for i in range(5):
+            count = 0
 
-        if count != 0:
-            print(guess[i], "is correct. There are", count, guess[i])
-        else:
-            print(guess[i], "is incorrect")
+            for j in range(5):
+                if guess[i] == secret_word[j]:
+                    count += 1
 
-    if guess == secret_word:
+            if count != 0:
+                print(guess[i], "is correct. There are", count, guess[i])
+            else:
+                print(guess[i], "is incorrect")
 
-        if tries == 1:
-            score = 100
-        elif tries == 2:
-            score = 80
-        elif tries == 3:
-            score = 60
-        elif tries == 4:
-            score = 40
-        else:
-            score = 20
+        if guess == secret_word:
 
-        print("\nYou guessed it correctly")
-        print("Total tries:", tries)
-        print("Your score is:", score)
+            if tries == 1:
+                score = 100
+            elif tries == 2:
+                score = 80
+            elif tries == 3:
+                score = 60
+            elif tries == 4:
+                score = 40
+            else:
+                score = 20
 
-        save_score("wordle", score, "Sujan")
-        print("\nScore Saved Successfully")
+            print("\nYou guessed it correctly")
+            print("Total tries:", tries)
+            print("Your score is:", score)
 
-        break
+            save_score("wordle", score, username)
+            print("\nScore Saved Successfully")
+
+            break
