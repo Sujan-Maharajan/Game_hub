@@ -9,7 +9,6 @@ def save_high_score(game, score, username):
 
     current_score = games[username][game]
 
-    # Save only if new score is higher
     if score > current_score:
 
         games[username][game] = score
