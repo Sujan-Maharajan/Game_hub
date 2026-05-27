@@ -1,6 +1,6 @@
 def quiz():
 
-    a=int(input("Press 1 to play game: "))
+    a=int(input("Press 1 to play game or Press 0 to exit: "))
     while a==1:
         count=0
         score=0
@@ -14,45 +14,60 @@ def quiz():
         print("2. 8484")
         print("3. 8848")
 
-        a1=int(input("Your answer: "))
-        if a1==3:
-            count+=1
+        try:
+            a1 = int(input("Your answer: "))
+            if a1 == 3:
+                count += 1
+        except:
+            print("Invalid input!")
 
         print("\nQuestion 2: Where is Mt.Everest located?")
         print("1. India")
         print("2. Nepal")
         print("3. China")
 
-        a1=int(input("Your answer: "))
-        if a1==2:
-            count+=1
+        try:
+            a1 = int(input("Your answer: "))
+            if a1 == 2:
+                count += 1
+        except:
+            print("Invalid input!")
 
         print("\nQuestion 3: What is the capital of Nepal?")
         print("1. Pokhara")
         print("2. Hetauda")
         print("3. Kathmandu")
 
-        a1=int(input("Your answer: "))
-        if a1==3:
-            count+=1
+        try:
+            a1 = int(input("Your answer: "))
+            if a1 == 3:
+                count += 1
+        except:
+            print("Invalid input!")
 
         print("\nQuestion 4: Which planet is known as the Red Planet?")
         print("1. Mercury")
         print("2. Venus")
         print("3. Mars")
 
-        a1=int(input("Your answer: "))
-        if a1==3:
-            count+=1
+        try:
+            a1 = int(input("Your answer: "))
+            if a1 == 3:
+                count += 1
+        except:
+            print("Invalid input!")
 
         print("\nQuestion 5: Which symbol is used for comments in Python?")
         print("1. #")
         print("2. \\")
         print("3. //")
 
-        a1=int(input("Your answer: "))
-        if a1==1:
-            count+=1
+        try:
+            a1 = int(input("Your answer: "))
+            if a1 == 1:
+                count += 1
+        except:
+            print("Invalid input!")
 
         if count==5:
             score=100
@@ -67,7 +82,7 @@ def quiz():
         else:
             score=0
         
-        print("You got",count,"answers correct.")
+        print("\nYou got",count,"answers correct.")
         print("Your score is:",score)
     
         a=int(input("Press 1 to play game: "))
