@@ -19,7 +19,7 @@ def quiz():
             if a1 == 3:
                 count += 1
         except:
-            print("Invalid input!")
+            print("Invalid input")
 
         print("\nQuestion 2: Where is Mt.Everest located?")
         print("1. India")
@@ -31,7 +31,7 @@ def quiz():
             if a1 == 2:
                 count += 1
         except:
-            print("Invalid input!")
+            print("Invalid input")
 
         print("\nQuestion 3: What is the capital of Nepal?")
         print("1. Pokhara")
@@ -43,7 +43,7 @@ def quiz():
             if a1 == 3:
                 count += 1
         except:
-            print("Invalid input!")
+            print("Invalid input")
 
         print("\nQuestion 4: Which planet is known as the Red Planet?")
         print("1. Mercury")
@@ -55,7 +55,7 @@ def quiz():
             if a1 == 3:
                 count += 1
         except:
-            print("Invalid input!")
+            print("Invalid input")
 
         print("\nQuestion 5: Which symbol is used for comments in Python?")
         print("1. #")
@@ -67,7 +67,7 @@ def quiz():
             if a1 == 1:
                 count += 1
         except:
-            print("Invalid input!")
+            print("Invalid input")
 
         if count==5:
             score=100
