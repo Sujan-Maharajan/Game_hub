@@ -1,8 +1,7 @@
 import random
-
 from dataManager.dataManager import *
 
-def wordle(username):
+def wordle():
 
     words = [
         "WORDS",
@@ -60,7 +59,9 @@ def wordle(username):
             print("Total tries:", tries)
             print("Your score is:", score)
 
-            save_score("wordle", score, username)
+            save_score("wordle", score, "Sujan")
             print("\nScore Saved Successfully")
 
             break
+
+wordle()

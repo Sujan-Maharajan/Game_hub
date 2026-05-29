@@ -1,3 +1,5 @@
+from dataManager.dataManager import *
+
 def quiz():
 
     a=int(input("Press 1 to play game or Press 0 to exit: "))

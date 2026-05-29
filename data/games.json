@@ -15,9 +15,9 @@
     },
     "Sujan": {
         "rps": 0,
-        "wordle": 20,
+        "wordle": 60,
         "ttt": 0,
         "quiz": 0,
-        "guess_number": 20
+        "guess_number": 40
     }
 }

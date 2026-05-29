@@ -1,6 +1,7 @@
 from dataManager.dataManager import *
 from wordle import *
 from guess_number import *
+from quiz import *
 from view_score_and_leaderboard import *
 
 temp = True
